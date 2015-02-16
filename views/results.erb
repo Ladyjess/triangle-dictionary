@@ -1,0 +1,21 @@
+<h3>What Type of triangle is this?</h3>
+
+<% if @triangle.equilateral?() %>
+<h5> It is an equilateral!</h5>
+<h5>Side One: <%= @length1%> </h5>
+<h5>Side Two: <%= @length2%> </h5>
+<h5>Side Three: <%= @length3%> </h5>
+
+
+<% elsif @triangle.isosceles? %>
+<h5> It is an isosceles </h5>
+<h5>Side One: <%= @length1 %></h5>
+<h5>Side Two: <%= @length2%> </h5>
+<h5>Side Three: <%= @length3%> </h5>
+
+<% else @triangle.scalene? %>
+<h5> It is a scalene!</h5>
+<h5>Side One: <%= @length1 %></h5>
+<h5>Side Two: <%= @length2%> </h5>
+<h5>Side Three: <%= @length1%> </h5>
+<% end %>
